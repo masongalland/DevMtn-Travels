@@ -25,4 +25,10 @@ angular.module('devmtnTravel').service('mainSrv', function(){
 
 
     }]
+
+    this.getLocationById = function(id) {
+    return travelInfo.filter(function(location) {
+      return location.id == id;
+    })[0];
+  }
 })
